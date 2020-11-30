@@ -1,8 +1,12 @@
 import React from "react";
+import Header from "../../components/Header";
 
 const Saved = () => {
   return (
-    <div>Saved</div>
+    <div>
+      <Header></Header>
+      Saved
+    </div>
   );
 }
 
