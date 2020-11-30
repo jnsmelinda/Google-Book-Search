@@ -20,13 +20,13 @@ class Search extends React.Component {
 
   handleSearch() {
     this.searchBooks(document.getElementById("searchInput").value);
-  };
+  }
 
   convertItem(item) {
     console.log(item);
     return {
-      id: item.id,
-      authors: item.volumeInfo.authors,
+      _id: item.id,
+      author: item.volumeInfo.authors,
       description: item.volumeInfo.description,
       image: item.volumeInfo.imageLinks.thumbnail,
       link: item.selfLink,
@@ -44,12 +44,7 @@ class Search extends React.Component {
         <ul>
           {this.state.items.map(item => (
             <Book
-              id={item.id}
-              title={item.title}
-              authors={item.authors}
-              description={item.description}
-              image={item.image}
-              link={item.link}>
+              item={item}>
             </Book>
           ))}
         </ul>
