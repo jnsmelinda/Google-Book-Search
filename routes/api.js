@@ -17,4 +17,14 @@ router.get("/api/books", (req, res) => {
     });
 });
 
+router.get("/api/books/:id", (req, res) => {
+  Books.findOneAndRemove({_id: req.params.id})
+    .then(book => {
+      res.json(book);
+    })
+    .catch(err => {
+      res.status(404).json(err);
+    });
+});
+
 module.exports = router;
