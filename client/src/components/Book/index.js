@@ -16,8 +16,9 @@ function Book(props) {
         title: {props.item.title}
         author: {props.item.author}
         description: {props.item.description}
-        <a href={props.item.link}></a>
-        <button>View</button>
+        <a href={props.item.link}>
+          <button>View</button>
+        </a>
         <button onClick={(event) => handleSave(event)}>Save</button>
       </li>
     </div>

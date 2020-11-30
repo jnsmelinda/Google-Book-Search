@@ -29,7 +29,7 @@ class Search extends React.Component {
       author: item.volumeInfo.authors,
       description: item.volumeInfo.description,
       image: item.volumeInfo.imageLinks.thumbnail,
-      link: item.selfLink,
+      link: item.volumeInfo.previewLink,
       title: item.volumeInfo.title
     }
   }
