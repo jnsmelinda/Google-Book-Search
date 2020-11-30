@@ -7,11 +7,14 @@ const mongoose = require("mongoose");
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+
+app.use(require("./routes/api.js"));
+
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/books");
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/googlebooks");
 // Define API routes here
 
 // Send every other request to the React app
