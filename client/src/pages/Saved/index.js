@@ -8,27 +8,37 @@ class Saved extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      items: []
+      books: []
     };
+
+    this.getBooks = this.getBooks.bind(this);
+    this.deleteBook = this.deleteBook.bind(this);
+    this.getBooks();
   }
 
-  componentDidMount() {
-      API.getBooks()
-        .then(res => this.setState({ items: res.data }))
-        .catch(err => console.log(err))
+  getBooks() {
+    API.getBooks()
+      .then(res => this.setState({ books: res.data }))
+      .catch(err => console.log(err))
+  }
+
+  deleteBook(book) {
+    API.deleteBook(book._id)
+      .then(() => this.setState({books: this.state.books.filter(e => e._id != book._id)}))
+      .catch(console.err)
   }
 
   render() {
-    console.log(this.state.items);
+    console.log(this.state.books);
     return (
-      < div >
+      <div>
         <Header></Header>
         <ul>
-          {this.state.items.map(item => (
-            <Book
-              item={item}>
-            </Book>
-          ))}
+          {
+            this.state.books.map(book =>
+              <Book name="delete" book={book} onClick={this.deleteBook}></Book>
+            )
+          }
         </ul>
         <Footer></Footer>
       </div >

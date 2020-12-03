@@ -1,29 +1,29 @@
 import React from "react";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
-import API from "../../utils/Books";
 import Book from "../../components/Book";
+import searchAPI from "../../utils/Books";
+import API from "../../utils/API";
 
 class Search extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      items: []
+      books: []
     };
-  }
-
-  searchBooks(query) {
-    API.getGooglebook(query)
-      .then(res => this.setState({ items: res.data.items.map(this.convertItem) }))
-      .catch(err => console.log(err));
   }
 
   handleSearch() {
     this.searchBooks(document.getElementById("searchInput").value);
   }
 
+  searchBooks(query) {
+    searchAPI.getGooglebook(query)
+      .then(res => this.setState({ books: res.data.items.map(this.convertItem) }))
+      .catch(err => console.log(err));
+  }
+
   convertItem(item) {
-    console.log(item);
     return {
       _id: item.id,
       author: item.volumeInfo.authors,
@@ -34,19 +34,25 @@ class Search extends React.Component {
     }
   }
 
+  handleSave(book) {
+    API.saveBook(book)
+      .then(console.log)
+      .catch(console.err)
+  }
+
   render() {
-    console.log(this.state.items);
+    console.log(this.state.books);
     return (
       <div>
         <Header></Header>
         <input type="text" id="searchInput" className="form-control" value={this.state.search} placeholder={this.state.search}></input>
         <button onClick={(event) => this.handleSearch(event)} className="btn btn-primary">Search</button>
         <ul>
-          {this.state.items.map(item => (
-            <Book
-              item={item}>
-            </Book>
-          ))}
+          {
+            this.state.books.map(book =>
+              <Book name="save" book={book} onClick={this.handleSave}></Book>
+            )
+          }
         </ul>
         <Footer></Footer>
       </div>
