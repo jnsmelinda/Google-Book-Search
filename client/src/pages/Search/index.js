@@ -11,6 +11,9 @@ class Search extends React.Component {
     this.state = {
       books: []
     };
+
+    this.handleSave = this.handleSave.bind(this);
+    this.disableSaveButton = this.disableSaveButton.bind(this);
   }
 
   handleSearch() {
@@ -28,7 +31,7 @@ class Search extends React.Component {
       _id: item.id,
       author: item.volumeInfo.authors,
       description: item.volumeInfo.description,
-      image: item.volumeInfo.imageLinks.thumbnail,
+      image: item.volumeInfo.imageLinks?.thumbnail,
       link: item.volumeInfo.previewLink,
       title: item.volumeInfo.title
     }
@@ -36,8 +39,17 @@ class Search extends React.Component {
 
   handleSave(book) {
     API.saveBook(book)
-      .then(console.log)
+      .then(() => this.disableSaveButton(book))
       .catch(console.err)
+  }
+
+  disableSaveButton(book) {
+    const bookIndex = this.state.books.findIndex(element => element._id === book._id);
+    let books = [...this.state.books];
+    let updatedBook = {...books[bookIndex]};
+    updatedBook.saved = true;
+    books[bookIndex] = updatedBook;
+    this.setState({books});
   }
 
   render() {

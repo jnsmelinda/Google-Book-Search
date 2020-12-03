@@ -5,14 +5,14 @@ class Book extends React.Component {
     return (
       <div>
         <li key={this.props.book._id}>
-          <img src={this.props.book.image}></img>
+          <img src={this.props.book.image || "NOIMAGE"}></img>
           title: {this.props.book.title}
           author: {this.props.book.author}
           description: {this.props.book.description}
           <a href={this.props.book.link}>
             <button>View</button>
           </a>
-          <button onClick={() => this.props.onClick(this.props.book)}>{this.props.name}</button>
+          <button disabled={this.props.book.saved} onClick={() => this.props.onClick(this.props.book)}>{this.props.name}</button>
         </li>
       </div>
     );

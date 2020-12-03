@@ -24,7 +24,7 @@ class Saved extends React.Component {
 
   deleteBook(book) {
     API.deleteBook(book._id)
-      .then(() => this.setState({books: this.state.books.filter(e => e._id != book._id)}))
+      .then(() => this.setState({books: this.state.books.filter(element => element._id !== book._id)}))
       .catch(console.err)
   }
 
