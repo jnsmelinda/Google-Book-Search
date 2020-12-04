@@ -12,6 +12,13 @@ function Header() {
           <li><Link to="saved" id="link">Saved</Link></li>
         </ul>
       </nav>
+
+      <div id="brand">
+        <h1>(React) Google Book Search</h1>
+        <p>
+          Search for and Save Books of Interest
+        </p>
+      </div>
     </div>
   );
 }
