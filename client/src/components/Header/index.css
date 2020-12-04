@@ -44,7 +44,9 @@ h1 {
 #brand {
   text-align: center;
   padding: 20px;
-  border-style: groove;
+  border-color: #bdbbbb;
+  border-width: 1px;
+  border-style: ridge;
 }
 
 p {
