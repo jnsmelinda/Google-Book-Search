@@ -5,7 +5,7 @@ class Book extends React.Component {
     return (
       <div>
         <li key={this.props.book._id}>
-          <img src={this.props.book.image || "NOIMAGE"}></img>
+          <img src={this.props.book.image || "/noimage.png"} ></img>
           title: {this.props.book.title}
           author: {this.props.book.author}
           description: {this.props.book.description}
