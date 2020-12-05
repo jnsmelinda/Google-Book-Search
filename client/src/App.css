@@ -127,4 +127,11 @@ p {
 #book {
   border-bottom-style: ridge;
   border-width: 1px;
+  margin-bottom: 30px;
+}
+
+footer {
+  text-align: center;
+  border-width: 1px;
+  border-top: ridge;
 }
