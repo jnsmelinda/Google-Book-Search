@@ -14,14 +14,14 @@ class Book extends React.Component {
               <h4 className="text-muted">{this.props.book.author}</h4>
             </div>
             <div className="col">
-              <a href={this.props.book.link}>
-                <button className="btn btn-primary" id="viewButton">
+              <a href={this.props.book.link} target="_blank">
+                <button className="btn btn-light" id="viewButton">
                   View
                 </button>
               </a>
               <button
                 id="saveDeleteButton"
-                className="btn btn-danger"
+                className="btn btn-light"
                 disabled={this.props.book.saved}
                 onClick={() => this.props.onClick(this.props.book)}>{this.props.name}
               </button>

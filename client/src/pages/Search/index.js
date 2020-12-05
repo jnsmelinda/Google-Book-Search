@@ -60,7 +60,7 @@ class Search extends React.Component {
         <div className="container">
           <div className="row" id="inputField">
             <input type="text" id="searchInput" className="input-group" value={this.state.search} placeholder={this.state.search}></input>
-            <button onClick={(event) => this.handleSearch(event)} className="btn btn-primary" id="searchButton">Search</button>
+            <button onClick={(event) => this.handleSearch(event)} className="btn btn-secondary" id="searchButton">Search</button>
           </div>
           <div className="book-container">
             {
