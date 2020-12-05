@@ -46,10 +46,10 @@ class Search extends React.Component {
   disableSaveButton(book) {
     const bookIndex = this.state.books.findIndex(element => element._id === book._id);
     let books = [...this.state.books];
-    let updatedBook = {...books[bookIndex]};
+    let updatedBook = { ...books[bookIndex] };
     updatedBook.saved = true;
     books[bookIndex] = updatedBook;
-    this.setState({books});
+    this.setState({ books });
   }
 
   render() {
@@ -57,15 +57,19 @@ class Search extends React.Component {
     return (
       <div>
         <Header></Header>
-        <input type="text" id="searchInput" className="form-control" value={this.state.search} placeholder={this.state.search}></input>
-        <button onClick={(event) => this.handleSearch(event)} className="btn btn-primary">Search</button>
-        <ul>
-          {
-            this.state.books.map(book =>
-              <Book name="save" book={book} onClick={this.handleSave}></Book>
-            )
-          }
-        </ul>
+        <div className="container">
+          <div className="row" id="inputField">
+            <input type="text" id="searchInput" className="input-group" value={this.state.search} placeholder={this.state.search}></input>
+            <button onClick={(event) => this.handleSearch(event)} className="btn btn-primary" id="searchButton">Search</button>
+          </div>
+          <div className="book-container">
+            {
+              this.state.books.map(book =>
+                <Book name="save" book={book} onClick={this.handleSave}></Book>
+              )
+            }
+          </div>
+        </div>
         <Footer></Footer>
       </div>
     );

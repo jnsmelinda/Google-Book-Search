@@ -1,0 +1,13 @@
+#inputField {
+  display: flex;
+  justify-content: center;
+  border-bottom-color: #bdbbbb;
+  border-bottom-width: 1px;
+  border-bottom-style: ridge;
+  padding: 20px;
+}
+
+#searchInput[type=text] {
+  width: 500px;
+  background-color: rgb(243, 193, 216);
+}

@@ -22,3 +22,79 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+body {
+  font-family: BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+nav ul {
+  list-style-type: none;
+  font-size: 20px;
+  padding-top: 15px;
+  margin-right: 20px;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-left: 25px;
+  font-size: 25px;
+  font-weight: lighter;
+}
+
+#link {
+  display: inline-block;
+  color:  rgb(143, 44, 90);
+  text-decoration: none;
+  text-align:left;
+}
+
+#link:hover {
+  color: rgb(143, 44, 90);
+  opacity: 0.7;
+}
+
+#logo {
+  color:  rgb(143, 44, 90);
+  font-size: 40px;
+  margin-left: 0px;
+}
+
+h1 {
+  display: run-in;
+  vertical-align: middle;
+  color:  rgb(143, 44, 90);
+  font-weight: normal;
+}
+
+#brand {
+  text-align: center;
+  padding: 20px;
+  border-color: #bdbbbb;
+  border-width: 1px;
+  border-style: ridge;
+}
+
+p {
+  color:  rgb(143, 44, 90);
+}
+
+#inputField {
+  display: flex;
+  justify-content: center;
+  border-bottom-color: #bdbbbb;
+  border-bottom-width: 1px;
+  border-bottom-style: ridge;
+  padding: 20px;
+}
+
+#searchInput {
+  width: 500px;
+  background-color: none;
+  border-radius: 2px;
+  border-width: 1px;
+}
+
+.thumbnail {
+  min-width: 140px;
+  margin: 5px;
+}
