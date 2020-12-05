@@ -65,7 +65,7 @@ class Search extends React.Component {
           <div className="book-container">
             {
               this.state.books.map(book =>
-                <Book name="save" book={book} onClick={this.handleSave}></Book>
+                <Book name="Save" book={book} onClick={this.handleSave}></Book>
               )
             }
           </div>

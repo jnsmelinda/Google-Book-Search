@@ -71,7 +71,8 @@ h1 {
   padding: 20px;
   border-color: #bdbbbb;
   border-width: 1px;
-  border-style: ridge;
+  border-top-style: ridge;
+  border-bottom-style: ridge;
 }
 
 p {
@@ -97,4 +98,32 @@ p {
 .thumbnail {
   min-width: 140px;
   margin: 5px;
+}
+
+#bookImg {
+  margin: 10px;
+}
+
+#bookInfo {
+  margin: 10px;
+}
+
+#viewButton {
+  margin-right: 5px;
+  margin-top: 5px;
+  background-color:  rgb(245, 199, 221);
+  color: #222;
+  border: none;
+}
+
+#saveDeleteButton {
+  margin-right: 5px;
+  margin-top: 5px;
+  background-color: gray;
+  border: none;
+}
+
+#book {
+  border-bottom-style: ridge;
+  border-width: 1px;
 }

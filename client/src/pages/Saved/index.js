@@ -36,7 +36,7 @@ class Saved extends React.Component {
         <div className="container">
           {
             this.state.books.map(book =>
-              <Book name="delete" book={book} onClick={this.deleteBook}></Book>
+              <Book name="Delete" book={book} onClick={this.deleteBook}></Book>
             )
           }
         </div>
