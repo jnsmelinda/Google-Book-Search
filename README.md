@@ -1,29 +1,27 @@
-# Create React Express App
+# Google Book Search
 
-## About This Boilerplate
+As a user, I want to be able to search for books and be able to save them to my reading list, so I have quick access to them. This app allowes you to search for books and in the search page save them to the reading-list or view them on google. When the book has been read, it can be deleted from the reading-list.
 
-This setup allows for a Node/Express/React app which can be easily deployed to Heroku.
+**Author:** Melinda Ivanov
 
-The front-end React app will auto-reload as it's updated via webpack dev server, and the backend Express app will auto-reload independently with nodemon.
+## Technologies
+- [JavaScript](https://www.javascript.com)
+- [React](https://reactjs.org/)
+- [HTML5](https://en.wikipedia.org/wiki/HTML5)
+- [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
+- [Git](https://git-scm.com/), [GitHub](https://github.com)
+- [MongoDB](https://www.mongodb.com/)
+- [Heroku](https://www.heroku.com/)
 
-## Starting the app locally
+## Links
+- https://github.com/jnsmelinda/Google-Book-Search
+- https://jnsmelinda.github.io/Employee-Directory/
 
-Start by installing front and backend dependencies. While in this directory, run the following command:
+# Usage 
+The app is deployes to heroku so you only need to visit the link and start searching for and saving books.
 
-```
-npm install
-```
+## License
+This repository is protected under the [MIT](https://choosealicense.com/licenses/mit/) license.
 
-This should install node modules within the server and the client folder.
-
-After both installations complete, run the following command in your terminal:
-
-```
-npm start
-```
-
-Your app should now be running on <http://localhost:3000>. The Express server should intercept any AJAX requests from the client.
-
-## Deployment (Heroku)
-
-To deploy, simply add and commit your changes, and push to Heroku. As is, the NPM scripts should take care of the rest.
+## Contribution
+Please contribute to this project by opening a Pull Request and following the `eslint` rules and the [Code of Conduct](https://www.contributor-covenant.org/version/2/0/code_of_conduct/).
