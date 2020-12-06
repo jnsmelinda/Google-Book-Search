@@ -15,7 +15,7 @@ As a user, I want to be able to search for books and be able to save them to my 
 
 ## Links
 - https://github.com/jnsmelinda/Google-Book-Search
-- https://jnsmelinda.github.io/Employee-Directory/
+- https://protected-island-24963.herokuapp.com/
 
 # Usage 
 The app is deployes to heroku so you only need to visit the link and start searching for and saving books.
