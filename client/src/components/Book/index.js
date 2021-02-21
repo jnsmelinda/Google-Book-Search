@@ -9,9 +9,9 @@ class Book extends React.Component {
         </div>
         <div className="col" id="bookInfo">
           <div className="row">
-            <div className="col-3">
+            <div className="col-6">
               <h3>{this.props.book.title}</h3>
-              <h4 className="text-muted">{this.props.book.author}</h4>
+              <h4 className="text-muted">{this.props.book.author.join(', ')}</h4>
             </div>
             <div className="col">
               <a href={this.props.book.link} target="_blank">
